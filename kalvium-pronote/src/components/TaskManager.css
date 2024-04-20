@@ -1,0 +1,113 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    transition: background-color 0.3s; /* Smooth background color transition */
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Task List Styles */
+  .task-list {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); /* Material design box-shadow */
+    padding: 20px;
+    width: 300px;
+    margin: 0 auto; /* Center task list */
+    animation: fadeIn 0.5s ease-in-out; /* Fade-in animation */
+  }
+  
+  .title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center; /* Center title text */
+    animation: popIn 0.5s ease-in-out; /* Pop-in animation */
+  }
+  
+  .input-field,
+  .edit-input {
+    padding: 10px;
+    font-size: 16px;
+    width: calc(100% - 20px); /* Adjust width to account for padding */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    display: block; /* Ensure it's a block element */
+    margin-left: auto; /* Auto margins for horizontal centering */
+    margin-right: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transform and shadow transition */
+  }
+  
+  .input-field:focus,
+  .edit-input:focus {
+    transform: scale(1.05); /* Slightly larger on focus */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* Shadow effect on focus */
+  }
+  
+  .button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    display: block; /* Block display for buttons */
+    margin: 10px auto; /* Center buttons below input field */
+    transition: background-color 0.3s, transform 0.3s; /* Background and transform transition */
+  }
+  
+  .add-task-button {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .add-task-button:hover {
+    transform: translateY(-2px); /* Move up slightly on hover */
+  }
+  
+  .edit-task-button,
+  .remove-task-button,
+  .update-task-button,
+  .cancel-button {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .edit-task-button:active,
+  .remove-task-button:active,
+  .update-task-button:active,
+  .cancel-button:active {
+    transform: scale(0.95); /* Slightly smaller on click */
+  }
+  
+  .edit-section {
+    margin-top: 20px;
+  }
+  
+  /* Keyframes for animations */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes popIn {
+    0% { transform: scale(0); }
+    60% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+  
+  /* Responsive Styles */
+  @media only screen and (min-width: 600px) {
+    .task-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+  }
+  
